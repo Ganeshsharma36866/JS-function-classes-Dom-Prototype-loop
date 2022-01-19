@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+
+<script>
+const arrry=["ganesh","amit","jagdish","Karan"]
+let a=" ";
+for(let i=0; i < arrry.length;i++){
+    a+=arrry[i]+"<br>";
+}
+document.getElementById("p1").innerHTML="  "+a;
+let t="";
+for(let b in arrry){
+t+=arrry[b]+"<br>"
+
+}
+document.getElementById("p2").innerHTML="  "+t;
+let q="javascript";
+let n=" ";
+for(let x of arrry){
+n+=x+"<br>";
+}
+let p=0;
+let whil="";
+document.getElementById("p3").innerHTML="  "+n;
+while (p < 5){
+whil+=p+"<br>";
+p++;
+}
+document.getElementById("p4").innerHTML=" "+whil;
+
+</script>
+
+</body>
+</html>

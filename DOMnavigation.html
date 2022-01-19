@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <p id="p1">Using DOM</p>
+    <p id="p2">Access by DOM</p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    
+    <h2>DOM projects</h2>
+   <h2>Dom navigation</h2>
+   <p id="p5"></p>
+    
+
+<script>
+document.getElementById("p3").innerHTML=document.body.innerHTML;
+ let paragrap=document.createElement("h1");
+ let node1=document.createTextNode("This new paragraph Create by DOM ");
+ paragrap.appendChild(node1);
+ const elem=document.getElementById("p4");
+ elem.appendChild(paragrap);
+ const gettagn=document.getElementsByTagName("h2");
+ document.getElementById("p5").innerHTML=gettagn[0].innerHTML;
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <p class="p1">Ganesh</p>
+    <p class="p1">Jagdish</p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    
+    <h1 id="h1">old text</h1>
+    <h2 id="h5">Form Validation</h2>
+   
+    <form name="myForm" action="/action_page.php" onsubmit="return show()" method="post">
+        Name: <input type="text" name="fname">
+        FName: <input type="text" name="f1name" id="f1name"  onchange="onchang1()">
+        <input type="submit" value="Submit" onclick="document.getElementById('h5').style.color='blue'">
+    </form>
+    <p id="cs">Hellow javascript</p>
+    <h3 onclick="innerHTML='Change Onclick Run'">Click on this</h3>
+    <input type="submit" value="Submit" id="bt1">
+    <p id="p7"></p>
+    <script>
+        var x = document.getElementsByClassName("p1");
+        document.getElementById("p3").innerHTML = "Element access by class name " + x[0].innerHTML;
+        var x = document.querySelectorAll("p.p1");
+        document.getElementById("p4").innerHTML = "Element access by Queryselector name= " + x[1].innerHTML;
+        const ele = document.getElementById("h1");
+        ele.innerHTML = "New block text";
+        document.getElementById("p5").innerHTML = "Date:" + Date();
+
+        function show() {
+            let fom = document.forms["myForm"]["fname"].value;
+            if (fom == "") {
+                alert("please fill all the coulmn");
+                return false;
+            }
+        }
+        document.getElementById("cs").style.color=" red";
+        function onchang1 () {
+            const x=document.getElementById("f1name");
+            x.value=x.value.toUpperCase();
+        }
+        var l=document.getElementById("bt1");
+        l.addEventListener("mouseover",mouseove);
+       
+        l.addEventListener("click",mouseclick);
+        l.addEventListener("mouseout", mouseout);
+
+        function mouseove(){
+           document.getElementById("p7").innerHTML +="Mouseover here!<br>";
+        };
+      
+        function mouseclick(){
+           document.getElementById("p7").innerHTML +="Mouse clicked!<br>";
+        };
+        function mouseout(){
+           document.getElementById("p7").innerHTML +="Mouseout!<br>";
+        };
+
+
+    </script>
+
+</body>
+
+</html>

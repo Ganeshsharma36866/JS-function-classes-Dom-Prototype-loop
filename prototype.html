@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+
+<script>
+ function person(name,fname,age) { 
+     this.Name=name;
+     this.Fname=fname;
+     this.Age=age;
+
+}
+person.prototype.nationality="Indian";
+
+const myobj=new person("Ganesh","Raj kumar",26);
+document.getElementById("p2").innerHTML="The Nationlity is "+myobj.nationality;
+let txt="";
+let foreach1=new Set(["ganesh","Vivek","Aman"]);
+foreach1.forEach (function(value) {
+    txt+=value + "<br>";  
+})
+document.getElementById("p4").innerHTML="The Using of foreach loop <br> "+txt;
+</script>
+
+</body>
+</html>
